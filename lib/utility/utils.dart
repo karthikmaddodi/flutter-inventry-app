@@ -1,25 +1,25 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 TextStyle displaySmall(BuildContext context) {
-  return Theme.of(context).textTheme.subtitle.copyWith(fontSize: 14.0);
+  return Theme.of(context).textTheme.bodySmall?.copyWith(fontSize: 14.0) ?? TextStyle(fontSize: 14.0);
 }
 
 TextStyle displayMedium(BuildContext context) {
-  return Theme.of(context).textTheme.title.copyWith(fontSize: 18.0);
+  return Theme.of(context).textTheme.bodyMedium?.copyWith(fontSize: 18.0) ?? TextStyle(fontSize: 18.0);
 }
 
 TextStyle displayLarge(BuildContext context) {
-  return Theme.of(context).textTheme.title.copyWith(fontSize: 22.0);
+  return Theme.of(context).textTheme.bodyLarge?.copyWith(fontSize: 22.0) ?? TextStyle(fontSize: 22.0);
 }
 
 TextStyle displayXL(BuildContext context) {
-  return Theme.of(context).textTheme.title.copyWith(fontSize: 30.0, letterSpacing: 2.0);
+  return Theme.of(context).textTheme.headlineMedium?.copyWith(fontSize: 30.0, letterSpacing: 2.0) ?? TextStyle(fontSize: 30.0, letterSpacing: 2.0);
 }
 
 TextStyle displayXLGrey(BuildContext context) {
-  return Theme.of(context).textTheme.title.copyWith(fontSize: 30.0, letterSpacing: 2.0, color: Colors.grey[700]);
+  return Theme.of(context).textTheme.headlineMedium?.copyWith(fontSize: 30.0, letterSpacing: 2.0, color: Colors.grey[700]) ?? TextStyle(fontSize: 30.0, letterSpacing: 2.0, color: Colors.grey[700]);
 }
+
 
 Widget stackWithLogo() {
 

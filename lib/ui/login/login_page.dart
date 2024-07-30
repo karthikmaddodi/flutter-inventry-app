@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:product_inventry/ui/inventries.dart';
 import 'package:product_inventry/utility/utils.dart';
 
@@ -67,15 +66,17 @@ class LoginPage extends StatelessWidget {
               child: SizedBox(
                 height: 50,
                 width: 150,
-                child: RaisedButton(
+                child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => Inventory()),
                       );
                     },
+                  style: ElevatedButton.styleFrom(
                     elevation: 2.0,
-                    color: Colors.white,
+                    backgroundColor: Colors.white,
+                  ),
                     //splashColor: Colors.green,
                     child: Container(child: Text('Get Started ->'))),
               ),

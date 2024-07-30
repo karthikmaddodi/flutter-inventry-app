@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:product_inventry/utility/utils.dart';
-import 'package:custom_switch/custom_switch.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 
 class MiraroadPage extends StatefulWidget {
   @override
@@ -59,10 +59,10 @@ class _MiraroadPageState extends State<MiraroadPage> {
 
             SizedBox(width: 20,),
 
-            CustomSwitch(
+            FlutterSwitch(
               activeColor: Colors.blue,
               value: isTesseled,
-              onChanged: (value) {
+              onToggle: (value) {
                 print("VALUE : $value");
                 setState(() {
                   isTesseled = value;
@@ -119,7 +119,7 @@ class _MiraroadPageState extends State<MiraroadPage> {
                   height: 50,
                   width: double.infinity,
                   child: Container(
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {},
                       child: Text(
                         'UPDATE',

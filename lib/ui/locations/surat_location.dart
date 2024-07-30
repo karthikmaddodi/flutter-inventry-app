@@ -27,19 +27,19 @@ class _SuratPageState extends State<SuratPage> {
   final Map<int, Widget> icons = const <int, Widget>{
     0: Center(
       child: FlutterLogo(
-        colors: Colors.indigo,
+        textColor: Colors.indigo,
         size: 200.0,
       ),
     ),
     1: Center(
       child: FlutterLogo(
-        colors: Colors.teal,
+        textColor: Colors.teal,
         size: 200.0,
       ),
     ),
     2: Center(
       child: FlutterLogo(
-        colors: Colors.cyan,
+        textColor: Colors.cyan,
         size: 200.0,
       ),
     ),
@@ -47,10 +47,12 @@ class _SuratPageState extends State<SuratPage> {
 
   int currentSegment = 0;
 
-  void onValueChanged(int newValue) {
-    setState(() {
-      currentSegment = newValue;
-    });
+  void onValueChanged(int? newValue) {
+    if (newValue != null) {
+      setState(() {
+        currentSegment = newValue;
+      });
+    }
   }
 
   @override

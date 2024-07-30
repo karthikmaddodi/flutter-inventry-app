@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:product_inventry/ui/locations/mira_location.dart';
 import 'package:product_inventry/ui/locations/surat_location.dart';
 import 'package:product_inventry/utility/utils.dart';
@@ -175,13 +174,15 @@ class MainPage extends StatelessWidget {
                       alignment: Alignment.center,
                       child: SizedBox(
                         width: 200,
-                        child: RaisedButton(
+                        child: ElevatedButton(
                             onPressed: () {
                               _showModalSheet();
                             },
+                             style: ElevatedButton.styleFrom(
                             elevation: 3.0,
-                            color: Colors.teal,
+                            backgroundColor: Colors.teal,
                             padding: EdgeInsets.all(20),
+                             ),
                             //splashColor: Colors.green,
                             child: Container(
                                 child: Text(
